@@ -1,38 +1,96 @@
-.App {
+body{
+  background: #1d1d1d;
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+  background: #9da5ab;
+}
+.search, .navbar h2{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+input[type="text"]{
+  padding: 5px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  width: 100px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+input[type="submit"] {
+  padding: 5px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  width: 80px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: ease-in 0.4s all;
+}
+
+
+input[type="submit"]:hover {
+  background-color: #282c34;
+  color: antiquewhite;
+}
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.browse-name-movie{
+  margin: -5px auto;
+  padding: 0 5px;
+  max-width: 220px;
+  text-align: left;
+  display: block;
+}
+.movies h2, .movies p{
+  font-size: .95em;
+  color: white;
+}
+.movies p{
+  font-size: .85em;
+}
+.App-header h2 {
+  margin: 0;
+}
+
+.add-movies {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-movies button {
+  font-size: 16px;
+  padding: 8px;
+  margin: 0 10px 30px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie {
+  padding: 5px 25px 10px 25px;
+  max-width: 25%;
+  margin-left: -15px; margin-right:-15px ;
+}
+.loader{
+  text-align:center;
+}
+.errorMessage {
+  margin: auto;
+  font-weight: bold;
+  color: rgb(161, 15, 15);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.search > input[type="text"]{
+  width: 40%;
+  min-width: 170px;
+} 
